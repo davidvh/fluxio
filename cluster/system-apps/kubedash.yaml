@@ -23,7 +23,7 @@ spec:
     extraArgs:
       - --enable-skip-login
       - --disable-settings-authorizer
-      - -- enable-insecure-login
+      - --enable-insecure-login
     metricsScraper:
       enabled: true
 ---
