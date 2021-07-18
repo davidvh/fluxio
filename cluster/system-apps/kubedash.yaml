@@ -35,8 +35,6 @@ metadata:
     app.kubernetes.io/version: latest
   name: system-kubernetes-dashboard
   namespace: system
-  secrets:
-    - name: kubedash-account-secret
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
