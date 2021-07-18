@@ -40,5 +40,3 @@ subjects:
   - kind: ServiceAccount
     name: system-kubernetes-dashboard
     namespace: system
-    secrets:
-      - name: kubedashboard-secret
