@@ -9,7 +9,6 @@ spec:
   chart:
     spec:
       chart: longhorn
-      version: "latest"
       sourceRef:
         kind: HelmRepository
         name: longhorn
