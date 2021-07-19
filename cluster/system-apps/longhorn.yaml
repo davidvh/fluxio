@@ -18,9 +18,9 @@ spec:
     ingress:
       enabled: true
       hosts:
-        - host: longhorn.marms
-          paths:
-            - path: /
+        - paths:
+            - host: longhorn.marms
+              path: /
               pathType: Prefix
               backend:
                 service:
