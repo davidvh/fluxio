@@ -23,13 +23,3 @@ spec:
           paths:
             - path: /
               pathType: Prefix
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: portainer
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 10Gi
