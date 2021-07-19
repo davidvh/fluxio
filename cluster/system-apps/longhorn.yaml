@@ -14,3 +14,11 @@ spec:
         name: longhorn
         namespace: flux-system
       interval: 1m
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - host: longhorn.marms
+          paths:
+            - path: /
+              pathType: Prefix
