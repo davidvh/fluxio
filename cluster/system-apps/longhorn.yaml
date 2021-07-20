@@ -25,3 +25,6 @@ spec:
               backend:
                 service:
                   name: longhorn-frontend
+    extraArgs:
+      - --set csi.kubeletRootDir="/var/snap/microk8s/common/var/lib/kubelet"
+      - --set defaultSettings.defaultDataPath="/tmp/longhorn"
