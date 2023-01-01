@@ -19,7 +19,6 @@ spec:
   chart:
     spec:
       chart: ingress-nginx
-      version: "stable"
       sourceRef:
         kind: HelmRepository
         name: ingress-nginx
