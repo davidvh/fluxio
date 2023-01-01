@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: heimdall_ns
+  name: heimdall-ns
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -9,7 +9,7 @@ metadata:
   labels:
     app: heimdall
   name: heimdall
-  namespace: heimdall_ns
+  namespace: heimdall-ns
   selfLink: /apis/apps/v1/namespaces/default/deployments/heimdall
 spec:
   progressDeadlineSeconds: 600
@@ -57,7 +57,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ingress-heimdall
-  namespace: heimdall_ns
+  namespace: heimdall-ns
 spec:
   rules:
   - host: heimdall.marms.duckdns.org
