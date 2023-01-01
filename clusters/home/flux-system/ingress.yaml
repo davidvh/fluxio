@@ -23,7 +23,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: ingress-nginx
-        namespace: default
+        namespace: ingress-nginx
       interval: 1h
   install:
     crds: CreateReplace
