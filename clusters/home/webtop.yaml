@@ -40,8 +40,6 @@ spec:
           value: "US/Pacific"
         ports:
         - containerPort: 3000
-      volumes:
-      - name: webtop
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
