@@ -55,3 +55,23 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-monitoring
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-grafana
+  namespace: monitoring
+spec:
+  rules:
+  - host: marms.duckdns.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kube-prometheus-stack-grafana
+            port:
+              number: 80
+  ingressClassName: nginx
