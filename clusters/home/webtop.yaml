@@ -64,5 +64,5 @@ spec:
           service:
             name: webtop
             port:
-              number: 80
+              number: 3000
   ingressClassName: nginx
