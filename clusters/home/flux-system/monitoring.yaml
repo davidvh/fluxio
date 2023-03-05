@@ -57,6 +57,11 @@ spec:
     name: flux-monitoring
 
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
