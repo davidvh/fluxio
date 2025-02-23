@@ -41,3 +41,4 @@ spec:
       target:
         kind: IPAddressPool
         name: primaryPool
+        namespace: metallb-system
