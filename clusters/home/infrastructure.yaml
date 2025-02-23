@@ -40,5 +40,5 @@ spec:
             - 192.168.10.0/24
       target:
         kind: IPAddressPool
-        name: primaryPool
+        name: primarypool
         namespace: metallb-system
