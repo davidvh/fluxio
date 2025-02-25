@@ -34,3 +34,7 @@ spec:
       ingressClassResource:
         default: "true"
       allowSnippetAnnotations: "true"
+      service:
+        loadBalancerIP: 127.0.0.1
+        annotations:
+          "metallb.universe.tf/allow-shared-ip": "cluster"

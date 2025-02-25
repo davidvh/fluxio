@@ -2,7 +2,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: infra-controllers
+  name: infra-controllers0
   namespace: flux-system
 spec:
   interval: 1h
@@ -11,25 +11,25 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/controllers
+  path: ./infrastructure/controllers0
   prune: true
   wait: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: infra-config
+  name: infra-controllers1
   namespace: flux-system
 spec:
   dependsOn:
-    - name: infra-controllers
+    - name: infra-controllers0
   interval: 1h
   retryInterval: 1m
   timeout: 5m
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./infrastructure/config
+  path: ./infrastructure/controllers1
   prune: true
   wait: true
   patches:
@@ -42,3 +42,11 @@ spec:
         kind: IPAddressPool
         name: primarypool
         namespace: metallb-system
+    - patch: |
+        - op: replace
+          path: /spec/values/controller/service/loadBalancerIP
+          value: 192.168.10.1
+      target:
+        kind: HelmRelease
+        name: nginx
+        namespace: ingress-nginx
